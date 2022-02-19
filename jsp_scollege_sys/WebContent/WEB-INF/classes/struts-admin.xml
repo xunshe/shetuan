@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="admin" extends="json-default" namespace="/admin">
+	  	<action name="Login*" class="com.nkl.admin.action.LoginAction" method="{1}">
+	  		<result name="error">login.jsp</result>
+	  		<result name="success" type="redirect">index.jsp</result>
+	  		<result name="logout" type="redirect">login.jsp</result>
+	  	</action>
+	  	
+	  	<action name="Admin_*" class="com.nkl.admin.action.AdminAction" method="{1}">
+	  		<result name="loginTip" type="redirect">loginTip.jsp</result>
+	  		<result name="infoTip">infoTip.jsp</result>
+	  		<result name="userInfo" type="redirect">modifyInfo.jsp</result>
+	  		<result name="userPwd" type="redirect">modifyPwd.jsp</result>
+	  		<result name="userShow">userShow.jsp</result>
+	  		<result name="userEdit">userEdit.jsp</result>
+	  		<result name="collegeApproveShow">collegeApproveShow.jsp</result>
+	  		<result name="collegeShow">collegeShow.jsp</result>
+	  		<result name="collegeEdit">collegeEdit.jsp</result>
+	  		<result name="collegeNoteShow">collegeNoteShow.jsp</result>
+	  		<result name="collegeNoteEdit">collegeNoteEdit.jsp</result>
+	  		<result name="memberShow">memberShow.jsp</result>
+	  		<result name="equipShow">equipShow.jsp</result> 
+	  		<!-- <result name="equipShow">equipShow.jsp</result> -->
+	  		<result name="equipEdit">equipEdit.jsp</result>
+	  		<result name="picnewsShow">picnewsShow.jsp</result>
+	  		<result name="picnewsEdit">picnewsEdit.jsp</result>
+	  		<result name="activityShow">activityShow.jsp</result>
+	  		<result name="activityEdit">activityEdit.jsp</result>
+	  		<result name="newsShow">newsShow.jsp</result>
+	  		<result name="newsEdit">newsEdit.jsp</result>
+	  		<result name="sblogShow">sblogShow.jsp</result>
+	  	</action>
+	  	
+	  	<action name="UploadImg" class="com.nkl.admin.action.UploadImgAction"> 
+	  		<param name="savePath">images/hdtp</param>	  
+	  		<param name="savePath2">images/sttp</param>	
+	  		<param name="savePath3">images/xwtp</param>	  
+	  		<param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png,image/pjpeg</param>	    
+	  		<param name="maximunSize">5245880</param>	    
+	  		<result name="success">uploadImg${num}.jsp</result>
+	  		<result name="input">uploadImg${num}.jsp</result>
+	  	</action>
+	</package>
+</struts>    

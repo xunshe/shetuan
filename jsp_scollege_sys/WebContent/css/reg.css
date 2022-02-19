@@ -1,0 +1,16 @@
+
+.regTable{
+	margin-top:5px;
+	margin-bottom:15px;
+	width:99%;
+	border-collapse: collapse;
+}
+.regTable td{
+	padding:5px;
+	border:1px solid #d2d2d8;
+}
+.regTable .theme{
+	height:28px;
+	background-image:url('../images/wbg.gif');
+	font-weight:bold;
+}

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="page" extends="json-default" namespace="/">
+	
+	  	<action name="Login*" class="com.nkl.page.action.LoginAction" method="{1}">
+	  		<result name="success" type="json">
+	  			<param name="ignoreHierarchy">false</param>
+            	<param name="includeProperties">
+					success,data.*
+				</param>
+            </result>
+            <result name="error" type="json">
+            	<param name="ignoreHierarchy">false</param>
+			    <param name="includeProperties">
+					success,err.*
+				</param>
+			</result>
+	  	</action>
+	  	
+	  	<action name="page_*" class="com.nkl.page.action.IndexAction" method="{1}">
+	  		<result name="error">Error.jsp</result>
+	  		<result name="index">default.jsp</result>
+	  		<result name="tpxw">tpxw.jsp</result>
+	  		<result name="news">news.jsp</result>
+	  		<result name="newsDetail">newsDetail.jsp</result>
+	  		<result name="activity">activity.jsp</result>
+	  		<result name="activityDetail">activityDetail.jsp</result>
+	  		<result name="college">college.jsp</result>
+	  		<result name="collegeDetail">collegeDetail.jsp</result>
+	  		<result name="collegeCreate">collegeCreate.jsp</result>
+	  		<result name="memberJoin">memberJoin.jsp</result>
+	  		<result name="sblog">sblog.jsp</result>
+	  		<result name="success" type="json">
+	  			<param name="ignoreHierarchy">false</param>
+            	<param name="includeProperties">
+					success,data.*
+				</param>
+            </result>
+            <result name="error2" type="json">
+            	<param name="ignoreHierarchy">false</param>
+			    <param name="includeProperties">
+					success,err.*
+				</param>
+			</result>
+			<result name="reg">reg.jsp</result>
+			<result name="myCollegeApply">myCollegeApply.jsp</result>
+			<result name="myMemberApply">myMemberApply.jsp</result>
+			<result name="userInfo">myInfo.jsp</result>
+	  		<result name="userPwd">myPwd.jsp</result>
+	  	</action>
+	  	 
+	  	<action name="UploadImg" class="com.nkl.page.action.UploadImgAction"> 	    
+	  		<param name="savePath">images/sttp</param>	    
+	  		<param name="allowedTypes">image/bmp,image/png,image/gif,image/jpeg,image/jpg,image/x-png,image/pjpeg</param>	    
+	  		<param name="maximunSize">5245880</param>	    
+	  		<result name="success">uploadImg.jsp</result>
+	  		<result name="input">uploadImg.jsp</result>
+	  	</action>
+	</package>
+</struts>    

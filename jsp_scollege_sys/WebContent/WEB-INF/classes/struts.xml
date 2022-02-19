@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+  <!-- 开发阶段配置 -->
+  <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+  <constant name="struts.serve.static.browserCache" value="false"></constant>
+  <constant name="struts.devMode" value="true"></constant>
+  <constant name="struts.i18n.reload" value="true"></constant>
+  <!-- 基本配置 -->
+  <constant name="struts.action.extension" value="action"></constant>
+  <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+  <constant name="struts.custom.i18n.resources" value="messageResource"></constant>
+  <!-- 设置struts2标签主题为 simple-->
+  <constant name="struts.ui.theme" value="simple"></constant>
+  <!-- 设置上传文件最大值为50M -->
+  <constant name="struts.multipart.maxSize" value="52428800"></constant>
+  <!-- constant name="struts.multipart.saveDir" value="/tmp"></constant> -->
+  <!-- 加载其它配置文件 -->
+  <include file="struts-page.xml"></include>
+  <include file="struts-admin.xml"></include>
+</struts>    

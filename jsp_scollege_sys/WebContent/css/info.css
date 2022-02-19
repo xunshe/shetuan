@@ -1,0 +1,97 @@
+#list{
+	float:left;
+	width:695px;
+	overflow:hidden;
+}
+#list .nav{
+	border-top:1px solid #8a1e1e;
+	border-bottom:1px solid #8a1e1e;
+	line-height:28px;
+	padding-left:10px;
+	color:#8a1e1e;
+}
+#list  .list_info{
+	margin-top:5px;
+	overflow:hidden;
+}
+#list  .list_info ul{
+   list-style:none;
+   margin:0px;
+   padding:5px;
+   color:black;
+}
+#list  .list_info  li {
+	line-height:28px;
+}
+#list  .list_info  li a{
+	font-size: 14px;
+	text-decoration:none;
+	color:black;
+}
+#list  .list_info  li a:hover{
+	text-decoration:none;
+	color:#8a1e1e;
+}
+#list li.li_hr{
+	height:5px;
+	color:#efefef;
+}
+#list li hr{
+	height:1px;
+	border:none;
+	border-top:1px solid #d2d2d8;
+}
+#Picture{
+	float:right;
+	margin-top:5px;
+	width:250px;
+	height:500px;
+	background-image: url('../images/pic.jpg');
+	background-repeat: no-repeat;
+	background-position: right top;
+	overflow:hidden;
+}
+#page{
+	height:35px;
+	line-height:35px;
+	padding:5px;
+	padding-left:20px;
+}
+#page   a{
+	text-decoration:none;
+	color:#666;
+}
+#page   a:hover{
+	text-decoration:underline;
+	color:red;
+}
+
+
+.article_title{
+	margin-top:10px;
+	text-align:center;
+	height:40px;
+	line-height:40px;
+	font-size: 18px; 
+	font-weight:bold;
+	color:#8a1e1e;
+}
+.article_time{
+	text-align:center;
+	height:30px;
+	line-height:30px;
+	color:#8a1e1e;
+	font-size: 12px; 
+}
+.article_pic{
+	margin-top:5px;
+	text-align:center;
+	padding:10px;
+}
+.article_con{
+	margin-top:5px;
+	text-align:left;
+	line-height:25px;
+	font-size: 14px; 
+	padding:10px;
+}
